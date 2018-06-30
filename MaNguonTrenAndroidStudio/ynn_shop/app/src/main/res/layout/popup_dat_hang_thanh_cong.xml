@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#ffffff"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<TextView-->
+        <!--android:text="\uE803"-->
+        <!--android:fontFamily="@font/dh_tc_tb"-->
+        <!--android:textSize="100sp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+        <TextView
+            android:layout_marginTop="50dp"
+            android:textColor="#32c24d"
+            android:text="\uE802"
+            android:fontFamily="@font/dh_tc_tb"
+            android:textSize="100sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#f57224"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Xin chúc mừng! Đơn hàng của bạn đã được tiếp nhận và đang được xử lý!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_mdh"
+                android:textColor="#151515"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="Mã đơn hàng của bạn là 123456789"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#151515"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Ynn_Shop (01672191286) sẽ gọi cho bạn để xác nhận thông tin trong thời gian sớm nhất!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="Quản lý và kiểm tra đơn hàng của bạn tại"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#151515"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Tài khoản của tôi > Đơn hàng của tôi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_ttmh"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#f57224"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="Tiếp tục mua hàng"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>

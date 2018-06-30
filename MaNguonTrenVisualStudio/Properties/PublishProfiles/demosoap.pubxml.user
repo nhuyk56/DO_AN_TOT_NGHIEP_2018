@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Nguyen.Nhu.Y\Desktop\DoAn\demosoap</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/22/2018 06:53:06</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/22/2018 06:53:11</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/22/2018 06:53:11</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>03/22/2018 06:53:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>03/22/2018 06:53:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>03/22/2018 06:53:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>03/22/2018 06:53:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>03/22/2018 06:53:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>03/22/2018 06:53:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/22/2018 06:53:09</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>03/22/2018 06:53:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/22/2018 06:53:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/22/2018 06:53:05</publishTime>
+    </File>
+    <File Include="bin/WebApplication2.dll">
+      <publishTime>06/29/2018 09:23:46</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/22/2018 06:53:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="DangNhap.aspx">
+      <publishTime>04/12/2018 21:47:41</publishTime>
+    </File>
+    <File Include="EmailTemplate.htm">
+      <publishTime>06/08/2018 10:27:46</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/22/2018 06:53:15</publishTime>
+    </File>
+    <File Include="QuanTri/anh/001_21.png">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/13.gif">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/banner.png">
+      <publishTime>06/11/2018 20:05:38</publishTime>
+    </File>
+    <File Include="QuanTri/anh/bg-footer.png">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/bg-header.png">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/bg-input.jpg">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-compose-20.png">
+      <publishTime>06/11/2018 10:39:06</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-insert-table-20.png">
+      <publishTime>06/15/2018 11:36:29</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-list-48.png">
+      <publishTime>06/11/2018 11:33:40</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-more-details-20.png">
+      <publishTime>06/19/2018 10:04:11</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-pictures-folder-20.png">
+      <publishTime>06/20/2018 09:51:53</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-plus-20.png">
+      <publishTime>06/15/2018 13:31:13</publishTime>
+    </File>
+    <File Include="QuanTri/anh/icons8-plus-filled-50.png">
+      <publishTime>06/11/2018 11:11:37</publishTime>
+    </File>
+    <File Include="QuanTri/anh/if_Remove_27874.ico">
+      <publishTime>06/11/2018 10:14:42</publishTime>
+    </File>
+    <File Include="QuanTri/anh/logo-footer.PNG">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/logo-header.PNG">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/logo.png">
+      <publishTime>06/11/2018 20:19:18</publishTime>
+    </File>
+    <File Include="QuanTri/anh/muitennho.png">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/sua.png">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/thanhdoc.png">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/thanhngang-footer.png">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/tiedeleft.png">
+      <publishTime>06/11/2018 20:32:16</publishTime>
+    </File>
+    <File Include="QuanTri/anh/top.png">
+      <publishTime>06/12/2018 14:14:08</publishTime>
+    </File>
+    <File Include="QuanTri/anh/xoa.png">
+      <publishTime>06/11/2018 20:32:11</publishTime>
+    </File>
+    <File Include="QuanTri/Banner/DanhSach.aspx">
+      <publishTime>06/14/2018 09:47:58</publishTime>
+    </File>
+    <File Include="QuanTri/Banner/sua.aspx">
+      <publishTime>06/14/2018 17:16:17</publishTime>
+    </File>
+    <File Include="QuanTri/Banner/them.aspx">
+      <publishTime>06/14/2018 15:27:30</publishTime>
+    </File>
+    <File Include="QuanTri/Banner/ThucHienXoa.aspx">
+      <publishTime>06/15/2018 17:20:45</publishTime>
+    </File>
+    <File Include="QuanTri/Banner/xoa.aspx">
+      <publishTime>06/14/2018 09:02:07</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/BaoCaoDT.aspx">
+      <publishTime>06/23/2018 17:31:10</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/calender.png">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/inDoanhThu.aspx">
+      <publishTime>06/22/2018 15:13:52</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/KhungDoanhThu.xsc">
+      <publishTime>06/22/2018 14:14:31</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/KhungDoanhThu.xss">
+      <publishTime>06/22/2018 14:14:31</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/Scripts/calendar-en.min.js">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/Scripts/jquery-1.4.1.js">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/Scripts/jquery-1.4.1.min.js">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/Scripts/jquery.dynDateTime.min.js">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/BaoCaoDoanhThu/Styles/calendar-blue.css">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="QuanTri/DangNhap.aspx">
+      <publishTime>06/22/2018 16:07:38</publishTime>
+    </File>
+    <File Include="QuanTri/dangXuat.aspx">
+      <publishTime>06/22/2018 15:31:51</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/capNhatTinhTrangDonHang.aspx">
+      <publishTime>06/21/2018 11:45:00</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/chiTietDonHang.aspx">
+      <publishTime>06/22/2018 11:11:42</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/danhSachDonHang.aspx">
+      <publishTime>06/22/2018 16:09:55</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/danhSachTTDH.aspx">
+      <publishTime>06/21/2018 06:25:12</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/inHoaDon.aspx">
+      <publishTime>06/23/2018 17:30:28</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/KhungDuLieu.xsc">
+      <publishTime>06/22/2018 11:20:19</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/KhungDuLieu.xss">
+      <publishTime>06/22/2018 11:20:19</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/khungHoaDon.xsc">
+      <publishTime>06/22/2018 10:38:14</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/khungHoaDon.xss">
+      <publishTime>06/22/2018 10:38:14</publishTime>
+    </File>
+    <File Include="QuanTri/DonHang/Report1.rdlc">
+      <publishTime>06/22/2018 13:42:05</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/calender.png">
+      <publishTime>06/14/2018 21:30:18</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/danhSach.aspx">
+      <publishTime>06/18/2018 06:27:18</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/danhSachSanPham.aspx">
+      <publishTime>06/22/2018 16:10:28</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/Scripts/calendar-en.min.js">
+      <publishTime>06/14/2018 21:33:50</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/Scripts/jquery-1.4.1.js">
+      <publishTime>06/14/2018 21:33:50</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/Scripts/jquery-1.4.1.min.js">
+      <publishTime>06/14/2018 21:33:50</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/Scripts/jquery.dynDateTime.min.js">
+      <publishTime>06/14/2018 21:33:50</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/Styles/calendar-blue.css">
+      <publishTime>06/14/2018 21:34:52</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/sua.aspx">
+      <publishTime>06/21/2018 11:26:20</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/suasp.aspx">
+      <publishTime>06/15/2018 15:45:33</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/them.aspx">
+      <publishTime>06/15/2018 10:46:27</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/themsp.aspx">
+      <publishTime>06/15/2018 16:11:13</publishTime>
+    </File>
+    <File Include="QuanTri/GiamGia/xoasp.aspx">
+      <publishTime>06/15/2018 16:28:44</publishTime>
+    </File>
+    <File Include="QuanTri/js/checkbox.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/jquery-1.3.2.min.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/slide1.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/slide2.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/slide3.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/slide4.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/js/slidetaitro.js">
+      <publishTime>06/11/2018 19:35:15</publishTime>
+    </File>
+    <File Include="QuanTri/KhoHang/danhSach.aspx">
+      <publishTime>06/21/2018 07:09:18</publishTime>
+    </File>
+    <File Include="QuanTri/KhoHang/danhSachSanPham.aspx">
+      <publishTime>06/20/2018 15:45:28</publishTime>
+    </File>
+    <File Include="QuanTri/KhoHang/sua.aspx">
+      <publishTime>06/19/2018 09:00:32</publishTime>
+    </File>
+    <File Include="QuanTri/KhoHang/them.aspx">
+      <publishTime>06/19/2018 10:20:21</publishTime>
+    </File>
+    <File Include="QuanTri/KhoHang/xoa.aspx">
+      <publishTime>06/19/2018 07:39:46</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/danhsachloaisanpham.aspx">
+      <publishTime>06/20/2018 15:20:52</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/danhsachloaisanpham2.aspx">
+      <publishTime>06/20/2018 15:20:52</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/danhsachloaisanphamcap1.aspx">
+      <publishTime>06/20/2018 14:00:13</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/danhSachSanPham.aspx">
+      <publishTime>06/22/2018 16:11:13</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/loaisanpham.ttf">
+      <publishTime>06/13/2018 14:33:32</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/sua.aspx">
+      <publishTime>06/14/2018 14:25:48</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/them.aspx">
+      <publishTime>06/14/2018 14:31:33</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/xoa.aspx">
+      <publishTime>06/14/2018 09:47:03</publishTime>
+    </File>
+    <File Include="QuanTri/LoaiSanPham/xoasp.aspx">
+      <publishTime>06/20/2018 15:02:46</publishTime>
+    </File>
+    <File Include="QuanTri/NhanVien/DanhSach.aspx">
+      <publishTime>06/26/2018 12:52:58</publishTime>
+    </File>
+    <File Include="QuanTri/NhanVien/sua.aspx">
+      <publishTime>06/26/2018 12:40:28</publishTime>
+    </File>
+    <File Include="QuanTri/NhanVien/them.aspx">
+      <publishTime>06/26/2018 11:38:04</publishTime>
+    </File>
+    <File Include="QuanTri/NhanVien/xoa.aspx">
+      <publishTime>06/26/2018 12:51:54</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/calender.png">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/danhSach.aspx">
+      <publishTime>06/20/2018 15:47:52</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/danhSachSanPham.aspx">
+      <publishTime>06/22/2018 16:11:30</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/Scripts/calendar-en.min.js">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/Scripts/jquery-1.4.1.js">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/Scripts/jquery-1.4.1.min.js">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/Scripts/jquery.dynDateTime.min.js">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/Styles/calendar-blue.css">
+      <publishTime>06/18/2018 09:26:45</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/sua.aspx">
+      <publishTime>06/18/2018 21:31:16</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/suasp.aspx">
+      <publishTime>06/18/2018 17:28:41</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/them.aspx">
+      <publishTime>06/18/2018 21:52:30</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/themsp.aspx">
+      <publishTime>06/18/2018 17:28:33</publishTime>
+    </File>
+    <File Include="QuanTri/PhieuNhap/xoasp.aspx">
+      <publishTime>06/18/2018 11:28:12</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/chiTiet.aspx">
+      <publishTime>06/19/2018 19:30:30</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/danhSach.aspx">
+      <publishTime>06/22/2018 16:11:45</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/danhSachAnh.aspx">
+      <publishTime>06/20/2018 11:43:36</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/sua.aspx">
+      <publishTime>06/20/2018 11:23:36</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/them.aspx">
+      <publishTime>06/26/2018 11:30:16</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/xoa.aspx">
+      <publishTime>06/19/2018 19:43:57</publishTime>
+    </File>
+    <File Include="QuanTri/SanPham/xoaAnh.aspx">
+      <publishTime>06/20/2018 10:47:40</publishTime>
+    </File>
+    <File Include="QuanTri/Site1.Master">
+      <publishTime>06/29/2018 09:23:35</publishTime>
+    </File>
+    <File Include="QuanTri/ThuongHieu/danhSach.aspx">
+      <publishTime>06/20/2018 15:53:41</publishTime>
+    </File>
+    <File Include="QuanTri/ThuongHieu/sua.aspx">
+      <publishTime>06/16/2018 05:46:10</publishTime>
+    </File>
+    <File Include="QuanTri/ThuongHieu/them.aspx">
+      <publishTime>06/14/2018 16:37:14</publishTime>
+    </File>
+    <File Include="QuanTri/xemTTDH.aspx">
+      <publishTime>06/20/2018 16:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>03/22/2018 06:53:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>03/22/2018 06:52:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>03/22/2018 06:53:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>03/22/2018 06:53:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>03/22/2018 06:53:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>03/22/2018 06:53:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>03/22/2018 06:53:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>03/22/2018 06:53:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>03/22/2018 06:53:08</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>03/22/2018 06:53:06</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>03/22/2018 06:53:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>03/22/2018 06:53:07</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>06/22/2018 12:44:23</publishTime>
+    </File>
+    <File Include="truy_van_ds_sp_tra_ve.txt">
+      <publishTime>05/04/2018 11:03:44</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/22/2018 06:53:09</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>03/22/2018 06:53:10</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/22/2018 06:52:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/22/2018 22:17:58</publishTime>
+    </File>
+    <File Include="WebService1.asmx">
+      <publishTime>03/22/2018 06:54:06</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/CSS/StyleSheet.css">
+      <publishTime>04/22/2017 13:43:33</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/DangNhap.aspx">
+      <publishTime>04/13/2018 07:45:35</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/IMG/banner.jpg">
+      <publishTime>04/12/2018 11:32:55</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/IMG/imgTK.png">
+      <publishTime>04/12/2018 11:34:22</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/MANAGER/category.aspx">
+      <publishTime>04/13/2018 10:44:53</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/PAGE/Site1.Master">
+      <publishTime>04/12/2018 21:28:08</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/WEBSERVICE/GetCategoryList.asmx">
+      <publishTime>04/13/2018 10:57:01</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/WEBSERVICE/Lay_Du_Lieu_Trang_Menu.asmx">
+      <publishTime>04/26/2018 14:56:39</publishTime>
+    </File>
+    <File Include="YNNSHOP56131778/WEBSERVICE/Lay_du_lieu_trang_san_pham.asmx">
+      <publishTime>05/14/2018 16:50:27</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

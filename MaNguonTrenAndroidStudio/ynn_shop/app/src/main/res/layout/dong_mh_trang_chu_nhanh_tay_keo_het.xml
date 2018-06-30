@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+<ImageView
+    android:layout_marginRight="10dp"
+    android:id="@+id/dmh_tc_ntkh_anh_sp"
+    android:layout_width="50dp"
+    android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:id="@+id/dmh_tc_ntkh_ll_gp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/dmh_tc_ntkh_anh_sp"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="10sp"
+            android:id="@+id/dmh_tc_ntkh_gia_ban_ra"
+            android:text="9.990.000 đ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="10sp"
+            android:id="@+id/dmh_tc_ntkh_pt_giam"
+            android:layout_marginLeft="10dp"
+            android:text="-15%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_above="@+id/dmh_tc_ntkh_ll_gp"
+        android:id="@+id/dmh_tc_ntkh_gia_da_giam"
+        android:layout_toRightOf="@id/dmh_tc_ntkh_anh_sp"
+        android:textSize="12sp"
+        android:textColor="#f57224"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.490.000 đ" />
+</RelativeLayout>

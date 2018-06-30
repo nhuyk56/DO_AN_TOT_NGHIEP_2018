@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cac_mang_hinh.mang_hinh_thanh_toan">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ToolbarTheme"
+        android:background="@drawable/mau_nen_tool_bar">
+        <RelativeLayout
+            android:id="@+id/RL_tk"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <TextView
+                android:gravity="left|center"
+                android:id="@+id/tv_tieu_de"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:background="@android:color/transparent"
+                android:textColor="#fff"
+                android:hint="Thông tin người nhận hàng"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_below="@+id/toolbar"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginBottom="51dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:enabled="false"
+            android:id="@+id/et_ho_ten_tt"
+            android:hint="Họ và tên"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:enabled="false"
+            android:id="@+id/et_email_tt"
+            android:hint="Địa chỉ email"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:enabled="false"
+            android:id="@+id/et_sdt_thanh_toan"
+            android:hint="Số điện thoại"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TIL_ttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_tinh_thanh_pho_tt"
+            android:hint="Tỉnh/Thành Phố"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_quan_huyen_tt"
+            android:hint="Quận/Huyện"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/tv_dia_chi_chi_tiet"
+            android:hint="Số nhà, tên đường, Phường/Xã"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:layout_marginTop="30dp"
+        android:text="(Nếu họ tên, số điện thoại không chính xác, xin quý khách vui lòng vào trang thông tin tài khoản và sửa lại cho chính xác trước khi xác nhận! Xin trân trọng cám ơn!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <TextView
+        android:id="@+id/tv_xac_nhan_tt"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#f57224"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="XÁC NHẬN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:padding="2dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/anh_sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/IV_anh_sp"
+        android:layout_width="100dp"
+        android:layout_height="120dp" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:layout_margin="2dp"
+        android:id="@+id/TV_ten_sp"
+        android:text="Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/IV_anh_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:textColor="#f48644"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/IV_anh_sp"
+        android:layout_below="@id/TV_ten_sp"
+        android:id="@+id/TV_gia_da_giam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10.800.000 VNĐ" />
+    <LinearLayout
+        android:layout_below="@id/TV_gia_da_giam"
+        android:id="@+id/khung_gg"
+        android:layout_toRightOf="@id/IV_anh_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TV_gia_ban_ra"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:focusable="false"
+            android:padding="5dp"
+            android:text="10.800.000 VNĐ"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/TV_pt"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:focusable="false"
+            android:paddingVertical="5dp"
+            android:text="-80%"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/khung_tang_giam_so_luong"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/IV_anh_sp"
+        android:layout_below="@+id/khung_gg">
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/TV_nhap_ma_gg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/vien_gia"
+            android:focusable="false"
+            android:fontFamily="@font/giam_gia"
+            android:padding="5dp"
+            android:text="\ue900"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="Số lượng"
+            android:textSize="16sp" />
+        <TextView
+            android:background="@drawable/vien_gia"
+            android:id="@+id/TV_sl"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="123"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

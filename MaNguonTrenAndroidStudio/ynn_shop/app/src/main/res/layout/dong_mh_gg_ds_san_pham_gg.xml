@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="5dp"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:id="@+id/IV_anh_sp_gg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/anh_gg"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+    <TextView
+        android:id="@+id/TV_tensp_gg"
+        android:maxLines="3"
+        android:text="Sản phẩm tivi màng hình LCD 3000 inch Sản phẩm tivi màng hình LCD 3000 inch Sản phẩm tivi màng hình LCD 3000 inch Sản phẩm tivi màng hình LCD 3000 inch"
+        android:layout_toRightOf="@+id/IV_anh_sp_gg"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/TV_gia_gc_sp_gg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/IV_anh_sp_gg"
+        android:text="200.000 vnđ"
+        android:textSize="10sp" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/TV_pt_sp_gg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/TV_gia_gc_sp_gg"
+        android:text="-30%"
+        android:textSize="10sp" />
+    <TextView
+        android:textColor="#f48644"
+        android:id="@+id/TV_gia_dg_sp_gg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TV_gia_gc_sp_gg"
+        android:layout_toRightOf="@id/IV_anh_sp_gg"
+        android:text="174.000 vnđ"
+        android:textSize="20sp" />
+
+</RelativeLayout>

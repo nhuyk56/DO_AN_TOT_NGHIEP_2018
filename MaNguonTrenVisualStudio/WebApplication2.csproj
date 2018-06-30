@@ -1,0 +1,921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2062CF4C-8BAD-4A21-B8E9-D9A30BA3C28A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DynamicJsonConverter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTri\Banner\DanhSach.aspx.cs">
+      <DependentUpon>DanhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Banner\DanhSach.aspx.designer.cs">
+      <DependentUpon>DanhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Banner\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Banner\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Banner\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Banner\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Banner\ThucHienXoa.aspx.cs">
+      <DependentUpon>ThucHienXoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Banner\ThucHienXoa.aspx.designer.cs">
+      <DependentUpon>ThucHienXoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Banner\xoa.aspx.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Banner\xoa.aspx.designer.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\BaoCaoDoanhThu\BaoCaoDT.aspx.cs">
+      <DependentUpon>BaoCaoDT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\BaoCaoDoanhThu\BaoCaoDT.aspx.designer.cs">
+      <DependentUpon>BaoCaoDT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\BaoCaoDoanhThu\inDoanhThu.aspx.cs">
+      <DependentUpon>inDoanhThu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\BaoCaoDoanhThu\inDoanhThu.aspx.designer.cs">
+      <DependentUpon>inDoanhThu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\BaoCaoDoanhThu\KhungDoanhThu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhungDoanhThu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\dangXuat.aspx.cs">
+      <DependentUpon>dangXuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\dangXuat.aspx.designer.cs">
+      <DependentUpon>dangXuat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\capNhatTinhTrangDonHang.aspx.cs">
+      <DependentUpon>capNhatTinhTrangDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\capNhatTinhTrangDonHang.aspx.designer.cs">
+      <DependentUpon>capNhatTinhTrangDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\chiTietDonHang.aspx.cs">
+      <DependentUpon>chiTietDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\chiTietDonHang.aspx.designer.cs">
+      <DependentUpon>chiTietDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\danhSachDonHang.aspx.cs">
+      <DependentUpon>danhSachDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\danhSachDonHang.aspx.designer.cs">
+      <DependentUpon>danhSachDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\danhSachTTDH.aspx.cs">
+      <DependentUpon>danhSachTTDH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\danhSachTTDH.aspx.designer.cs">
+      <DependentUpon>danhSachTTDH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\inHoaDon.aspx.cs">
+      <DependentUpon>inHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\inHoaDon.aspx.designer.cs">
+      <DependentUpon>inHoaDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\KhungDuLieu.cs">
+      <DependentUpon>KhungDuLieu.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\KhungDuLieu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhungDuLieu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\DonHang\khungHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>khungHoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\danhSach.aspx.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\danhSach.aspx.designer.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\danhSachSanPham.aspx.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\danhSachSanPham.aspx.designer.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\suasp.aspx.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\suasp.aspx.designer.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\themsp.aspx.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\themsp.aspx.designer.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\xoasp.aspx.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiamGia\xoasp.aspx.designer.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\danhSach.aspx.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\danhSach.aspx.designer.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\danhSachSanPham.aspx.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\danhSachSanPham.aspx.designer.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\xoa.aspx.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\KhoHang\xoa.aspx.designer.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanpham.aspx.cs">
+      <DependentUpon>danhsachloaisanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanpham.aspx.designer.cs">
+      <DependentUpon>danhsachloaisanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanpham2.aspx.cs">
+      <DependentUpon>danhsachloaisanpham2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanpham2.aspx.designer.cs">
+      <DependentUpon>danhsachloaisanpham2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanphamcap1.aspx.cs">
+      <DependentUpon>danhsachloaisanphamcap1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhsachloaisanphamcap1.aspx.designer.cs">
+      <DependentUpon>danhsachloaisanphamcap1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhSachSanPham.aspx.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\danhSachSanPham.aspx.designer.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\xoa.aspx.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\xoa.aspx.designer.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\xoasp.aspx.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LoaiSanPham\xoasp.aspx.designer.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\maHoa.cs" />
+    <Compile Include="QuanTri\NhanVien\DanhSach.aspx.cs">
+      <DependentUpon>DanhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\DanhSach.aspx.designer.cs">
+      <DependentUpon>DanhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\xoa.aspx.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhanVien\xoa.aspx.designer.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\danhSach.aspx.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\danhSach.aspx.designer.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\danhSachSanPham.aspx.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\danhSachSanPham.aspx.designer.cs">
+      <DependentUpon>danhSachSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\suasp.aspx.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\suasp.aspx.designer.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\themsp.aspx.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\themsp.aspx.designer.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\xoasp.aspx.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhieuNhap\xoasp.aspx.designer.cs">
+      <DependentUpon>xoasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\chiTiet.aspx.cs">
+      <DependentUpon>chiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\chiTiet.aspx.designer.cs">
+      <DependentUpon>chiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\danhSach.aspx.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\danhSach.aspx.designer.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\danhSachAnh.aspx.cs">
+      <DependentUpon>danhSachAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\danhSachAnh.aspx.designer.cs">
+      <DependentUpon>danhSachAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\xoa.aspx.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\xoa.aspx.designer.cs">
+      <DependentUpon>xoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\xoaAnh.aspx.cs">
+      <DependentUpon>xoaAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham\xoaAnh.aspx.designer.cs">
+      <DependentUpon>xoaAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\danhSach.aspx.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\danhSach.aspx.designer.cs">
+      <DependentUpon>danhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\sua.aspx.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\sua.aspx.designer.cs">
+      <DependentUpon>sua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\them.aspx.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\ThuongHieu\them.aspx.designer.cs">
+      <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\xemTTDH.aspx.cs">
+      <DependentUpon>xemTTDH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\xemTTDH.aspx.designer.cs">
+      <DependentUpon>xemTTDH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\FUNCTION\MyWebRequest.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\c0_item.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\c1_item.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\c2_group.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\c2_group_item.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\don_hang_cua_toi.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\giam_gia\chuong_trinh_giam_gia.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\giam_gia\sp_ap_dung.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\gio_hang\sp_mgg.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\khoi_phuc_mat_khau.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\nguoi_dung\dang_nhap.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\nguoi_dung\doi_mat_khau.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\nguoi_dung\nguoi.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\danh_gia_them.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\ds_sp_them.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\san_pham.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\thong_tin_danh_gia.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\thong_tin_so_luong.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\tra_ve_tim.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\san_pham\yeu_cau_san_pham.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\thong_bao.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\thong_tin_don_hang\don_hang.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\thong_tin_don_hang\san_pham_don_hang.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\thuong_hieu.cs" />
+    <Compile Include="YNNSHOP56131778\FUNCTION\ExtensionMethod.cs" />
+    <Compile Include="YNNSHOP56131778\CONGFIG\connect.cs" />
+    <Compile Include="YNNSHOP56131778\FUNCTION\process.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\van_chuyen\Dataum.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\van_chuyen\dtvanchuyen.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\bo_loc.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\danh_gia.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\gia_san_pham.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\loai_sp.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\phan_trang.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\sap_xep.cs" />
+    <Compile Include="YNNSHOP56131778\OBJECT\yeu_cau_danh_sach\yeu_cau_ds.cs" />
+    <Compile Include="YNNSHOP56131778\PAGE\DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\PAGE\MANAGER\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\PAGE\MANAGER\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\PAGE\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\PAGE\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\WEBSERVICE\Lay_du_lieu_trang_chu.cs" />
+    <Compile Include="YNNSHOP56131778\WEBSERVICE\Lay_Du_Lieu_Trang_Menu.asmx.cs">
+      <DependentUpon>Lay_Du_Lieu_Trang_Menu.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YNNSHOP56131778\WEBSERVICE\Lay_du_lieu_trang_san_pham.asmx.cs">
+      <DependentUpon>Lay_du_lieu_trang_san_pham.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="EmailTemplate.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="QuanTri\anh\001_21.png" />
+    <Content Include="QuanTri\anh\13.gif" />
+    <Content Include="QuanTri\anh\banner.png" />
+    <Content Include="QuanTri\anh\bg-footer.png" />
+    <Content Include="QuanTri\anh\bg-header.png" />
+    <Content Include="QuanTri\anh\bg-input.jpg" />
+    <Content Include="QuanTri\anh\icons8-insert-table-20.png" />
+    <Content Include="QuanTri\anh\icons8-more-details-20.png" />
+    <Content Include="QuanTri\anh\icons8-pictures-folder-20.png" />
+    <Content Include="QuanTri\anh\icons8-plus-20.png" />
+    <Content Include="QuanTri\anh\logo-footer.PNG" />
+    <Content Include="QuanTri\anh\logo-header.PNG" />
+    <Content Include="QuanTri\anh\logo.png" />
+    <Content Include="QuanTri\anh\muitennho.png" />
+    <Content Include="QuanTri\anh\sua.png" />
+    <Content Include="QuanTri\anh\thanhdoc.png" />
+    <Content Include="QuanTri\anh\thanhngang-footer.png" />
+    <Content Include="QuanTri\anh\tiedeleft.png" />
+    <Content Include="QuanTri\anh\top.png" />
+    <Content Include="QuanTri\anh\xoa.png" />
+    <Content Include="QuanTri\Banner\DanhSach.aspx" />
+    <Content Include="QuanTri\Banner\sua.aspx" />
+    <Content Include="QuanTri\Banner\them.aspx" />
+    <Content Include="QuanTri\Banner\ThucHienXoa.aspx" />
+    <Content Include="QuanTri\Banner\xoa.aspx" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\BaoCaoDT.aspx" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\calender.png" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\inDoanhThu.aspx" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\Scripts\calendar-en.min.js" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\KhungDoanhThu.xsc">
+      <DependentUpon>KhungDoanhThu.xsd</DependentUpon>
+    </Content>
+    <None Include="QuanTri\BaoCaoDoanhThu\KhungDoanhThu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KhungDoanhThu.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="QuanTri\BaoCaoDoanhThu\KhungDoanhThu.xss">
+      <DependentUpon>KhungDoanhThu.xsd</DependentUpon>
+    </Content>
+    <None Include="QuanTri\BaoCaoDoanhThu\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\Scripts\jquery-1.4.1.js" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\Scripts\jquery.dynDateTime.min.js" />
+    <Content Include="QuanTri\BaoCaoDoanhThu\Styles\calendar-blue.css" />
+    <Content Include="QuanTri\DangNhap.aspx" />
+    <Content Include="QuanTri\dangXuat.aspx" />
+    <Content Include="QuanTri\DonHang\capNhatTinhTrangDonHang.aspx" />
+    <Content Include="QuanTri\DonHang\chiTietDonHang.aspx" />
+    <Content Include="QuanTri\DonHang\danhSachDonHang.aspx" />
+    <Content Include="QuanTri\DonHang\danhSachTTDH.aspx" />
+    <Content Include="QuanTri\DonHang\inHoaDon.aspx" />
+    <Content Include="QuanTri\GiamGia\calender.png" />
+    <Content Include="QuanTri\GiamGia\danhSach.aspx" />
+    <Content Include="QuanTri\GiamGia\danhSachSanPham.aspx" />
+    <Content Include="QuanTri\GiamGia\Scripts\calendar-en.min.js" />
+    <Content Include="QuanTri\DonHang\KhungDuLieu.xsc">
+      <DependentUpon>KhungDuLieu.xsd</DependentUpon>
+    </Content>
+    <None Include="QuanTri\DonHang\KhungDuLieu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KhungDuLieu.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="QuanTri\DonHang\KhungDuLieu.xss">
+      <DependentUpon>KhungDuLieu.xsd</DependentUpon>
+    </Content>
+    <Content Include="QuanTri\DonHang\khungHoaDon.xsc">
+      <DependentUpon>khungHoaDon.xsd</DependentUpon>
+    </Content>
+    <None Include="QuanTri\DonHang\khungHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>khungHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="QuanTri\DonHang\khungHoaDon.xss">
+      <DependentUpon>khungHoaDon.xsd</DependentUpon>
+    </Content>
+    <None Include="QuanTri\GiamGia\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="QuanTri\GiamGia\Scripts\jquery-1.4.1.js" />
+    <Content Include="QuanTri\GiamGia\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="QuanTri\GiamGia\Scripts\jquery.dynDateTime.min.js" />
+    <Content Include="QuanTri\GiamGia\Styles\calendar-blue.css" />
+    <Content Include="QuanTri\GiamGia\sua.aspx" />
+    <Content Include="QuanTri\GiamGia\suasp.aspx" />
+    <Content Include="QuanTri\GiamGia\them.aspx" />
+    <Content Include="QuanTri\GiamGia\themsp.aspx" />
+    <Content Include="QuanTri\GiamGia\xoasp.aspx" />
+    <Content Include="QuanTri\js\checkbox.js" />
+    <Content Include="QuanTri\js\jquery-1.3.2.min.js" />
+    <Content Include="QuanTri\js\slide1.js" />
+    <Content Include="QuanTri\js\slide2.js" />
+    <Content Include="QuanTri\js\slide3.js" />
+    <Content Include="QuanTri\js\slide4.js" />
+    <Content Include="QuanTri\js\slidetaitro.js" />
+    <Content Include="QuanTri\KhoHang\danhSach.aspx" />
+    <Content Include="QuanTri\KhoHang\danhSachSanPham.aspx" />
+    <Content Include="QuanTri\KhoHang\sua.aspx" />
+    <Content Include="QuanTri\KhoHang\them.aspx" />
+    <Content Include="QuanTri\KhoHang\xoa.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\danhsachloaisanpham.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\danhsachloaisanpham2.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\danhsachloaisanphamcap1.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\danhSachSanPham.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\sua.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\them.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\xoa.aspx" />
+    <Content Include="QuanTri\LoaiSanPham\xoasp.aspx" />
+    <Content Include="QuanTri\NhanVien\DanhSach.aspx" />
+    <Content Include="QuanTri\NhanVien\sua.aspx" />
+    <Content Include="QuanTri\NhanVien\them.aspx" />
+    <Content Include="QuanTri\NhanVien\xoa.aspx" />
+    <Content Include="QuanTri\PhieuNhap\calender.png" />
+    <Content Include="QuanTri\PhieuNhap\danhSach.aspx" />
+    <Content Include="QuanTri\PhieuNhap\danhSachSanPham.aspx" />
+    <Content Include="QuanTri\PhieuNhap\Scripts\calendar-en.min.js" />
+    <None Include="QuanTri\PhieuNhap\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="QuanTri\PhieuNhap\Scripts\jquery-1.4.1.js" />
+    <Content Include="QuanTri\PhieuNhap\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="QuanTri\PhieuNhap\Scripts\jquery.dynDateTime.min.js" />
+    <Content Include="QuanTri\PhieuNhap\Styles\calendar-blue.css" />
+    <Content Include="QuanTri\PhieuNhap\sua.aspx" />
+    <Content Include="QuanTri\PhieuNhap\suasp.aspx" />
+    <Content Include="QuanTri\PhieuNhap\them.aspx" />
+    <Content Include="QuanTri\PhieuNhap\themsp.aspx" />
+    <Content Include="QuanTri\PhieuNhap\xoasp.aspx" />
+    <Content Include="QuanTri\anh\icons8-compose-20.png" />
+    <Content Include="QuanTri\anh\icons8-list-48.png" />
+    <Content Include="QuanTri\anh\icons8-plus-filled-50.png" />
+    <None Include="QuanTri\anh\icons8-waste-20.png" />
+    <Content Include="QuanTri\anh\if_Remove_27874.ico" />
+    <Content Include="QuanTri\SanPham\chiTiet.aspx" />
+    <Content Include="QuanTri\SanPham\danhSach.aspx" />
+    <Content Include="QuanTri\SanPham\danhSachAnh.aspx" />
+    <Content Include="QuanTri\SanPham\sua.aspx" />
+    <Content Include="QuanTri\SanPham\them.aspx" />
+    <Content Include="QuanTri\SanPham\xoa.aspx" />
+    <Content Include="QuanTri\SanPham\xoaAnh.aspx" />
+    <Content Include="QuanTri\ThuongHieu\danhSach.aspx" />
+    <Content Include="QuanTri\ThuongHieu\sua.aspx" />
+    <Content Include="QuanTri\ThuongHieu\them.aspx" />
+    <Content Include="QuanTri\xemTTDH.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="truy_van_ds_sp_tra_ve.txt" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="YNNSHOP56131778\WEBSERVICE\Lay_Du_Lieu_Trang_Menu.asmx" />
+    <Content Include="YNNSHOP56131778\WEBSERVICE\Lay_du_lieu_trang_san_pham.asmx" />
+    <None Include="Properties\PublishProfiles\demosoap.pubxml" />
+    <Content Include="QuanTri\Site1.Master" />
+    <Content Include="QuanTri\LoaiSanPham\loaisanpham.ttf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="YNNSHOP56131778\PAGE\CSS\StyleSheet.css" />
+    <Content Include="YNNSHOP56131778\PAGE\DangNhap.aspx" />
+    <Content Include="YNNSHOP56131778\PAGE\IMG\banner.jpg" />
+    <Content Include="YNNSHOP56131778\PAGE\IMG\imgTK.png" />
+    <Content Include="YNNSHOP56131778\PAGE\MANAGER\category.aspx" />
+    <Content Include="YNNSHOP56131778\PAGE\Site1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="QuanTri\BaoCaoDoanhThu\Report1.rdlc" />
+    <EmbeddedResource Include="QuanTri\DonHang\Report1.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3272</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3272/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

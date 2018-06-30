@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/splash"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cac_mang_hinh.mang_hinh_splash">
+<!--<TextView-->
+    <!--android:textColor="@color/text_sx"-->
+    <!--android:id="@+id/icon_splash"-->
+    <!--android:text="\ue900"-->
+    <!--android:fontFamily="@font/ynn_e900"-->
+    <!--android:textSize="50sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <ImageView
+        android:id="@+id/icon_splash"
+        android:src="@drawable/ic_splash"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+</LinearLayout>

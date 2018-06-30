@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout
+        android:background="#e9e7e7"
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#ffffff"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <android.support.v7.widget.Toolbar
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:layout_collapseMode="parallax"/>
+                <android.support.v7.widget.Toolbar
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:layout_collapseMode="parallax"
+                    android:theme="@style/ToolbarTheme"
+                    android:background="@drawable/mau_nen_tool_bar">
+                    <RelativeLayout
+                        android:id="@+id/RL_tk"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+                        <TextView
+                            android:layout_toLeftOf="@+id/tv_search"
+                            android:gravity="left|center"
+                            android:id="@+id/tv_tieu_de"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:background="@android:color/transparent"
+                            android:textColor="#fff"
+                            android:hint="Chi tiết sản phẩm"
+                            android:singleLine="true" />
+                        <TextView
+                            android:textSize="20sp"
+                            android:paddingHorizontal="10dp"
+                            android:gravity="center"
+                            android:id="@+id/tv_cart"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/font_icon_san_pham"
+                            android:text="\ue72f"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/tv_search"
+                            android:layout_toLeftOf="@+id/tv_cart"
+                            android:textSize="20sp"
+                            android:paddingHorizontal="10dp"
+                            android:gravity="center"
+                            android:text="\uE72E"
+                            android:fontFamily="@font/tim_kiem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+                <LinearLayout
+                    android:background="#faf6ef"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    app:layout_collapseMode="pin"
+                    android:id="@+id/ll_thanh_tab"
+                    android:weightSum="0"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:id="@+id/LL_TQ"
+                        android:weightSum="100"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="30"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#9e9e9e"
+                            android:id="@+id/TV_TQ"
+                            android:layout_weight="99"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="Tổng quan"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                        <TextView
+                            android:id="@+id/TV_TQ_Line"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_TTSP"
+                        android:weightSum="100"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="40"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#9e9e9e"
+                            android:id="@+id/TV_TTSP"
+                            android:layout_weight="99"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="Thông tin sản phẩm"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                        <TextView
+                            android:id="@+id/TV_TTSP_Line"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_DG"
+                        android:weightSum="100"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="30"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#9e9e9e"
+                            android:id="@+id/TV_DG"
+                            android:layout_weight="99"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="Đánh giá"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                        <TextView
+                            android:id="@+id/TV_DG_Line"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <!--cho nay ne-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/NSV_mh_sp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/RL_diem_TQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp">
+                    <android.support.v4.view.ViewPager
+                        android:fitsSystemWindows="true"
+                        android:background="#e9e7e7"
+                        android:id="@+id/vp_slide_anh_san_pham"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </android.support.v4.view.ViewPager>
+
+                    <TextView
+                        android:id="@+id/TV_STT_anh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/lam_tron_textview"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:text="loading"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/TV_STT_Tim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/lam_tron_textview"
+                        android:fontFamily="@font/font_icon_san_pham"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="3dp"
+                        android:text="\ue798"
+                        android:textColor="#ff0000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/TV_STT_Share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/TV_STT_anh"
+                        android:layout_marginEnd="79dp"
+                        android:background="@drawable/lam_tron_textview"
+                        android:fontFamily="@font/font_icon_san_pham"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="3dp"
+                        android:text="\ue68e"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/RL_diem_TQ_b"
+                    android:orientation="vertical"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/TV_ten_sp"
+                            android:textColor="#212121"
+                            android:textSize="15sp"
+                            android:text="loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/TV_sp_gia_ban_ra"
+                            android:textColor="#f57224"
+                            android:textSize="30sp"
+                            android:text="loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_sp_gia_cao"
+                                android:textColor="#9e9e9e"
+                                android:textSize="15sp"
+                                android:text="loading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv_sp_giam_pt"
+                                android:textColor="#212121"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="15sp"
+                                android:text="loading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="17dp"
+                                android:textColor="#ff0000"
+                                android:fontFamily="@font/font_icon_san_pham"
+                                android:text="\ue798"
+                                android:layout_gravity="center"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp" />
+
+                            <TextView
+                                android:id="@+id/tv_so_tim"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="loading"
+                                android:fontFamily="@font/opensanslight"
+                                android:textColor="#afb3c2"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/mrb_sp_tb_sao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stepSize="0.01"
+                                android:numStars="5"
+                                android:rating="3.5"
+                                android:theme="@style/RatingBar"
+                                style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small" />
+
+                            <TextView
+                                android:id="@+id/tv_dong_dssp_rv_so_sao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="loading"
+                                android:fontFamily="@font/opensanslight"
+                                android:textColor="#afb3c2"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/LL_dong_mh_sp_dg_chung_nhan_mua_hang"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/TV_sp_ic_vat"
+                                android:textColor="#4caf50"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:text="\ue800"
+                                android:fontFamily="@font/tick_not_tick"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp" />
+                            <TextView
+                                android:id="@+id/TV_sp_ten_vat"
+                                android:textColor="#4caf50"
+                                android:textSize="15sp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:text="Đã có VAT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/LL_dong_mh_sp_dg_sl_sp"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="#9e9e9e"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:text="\ue840"
+                                android:fontFamily="@font/kho"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp" />
+                            <TextView
+                                android:id="@+id/TV_sp_sl"
+                                android:textColor="#9e9e9e"
+                                android:textSize="15sp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="loading"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="#9e9e9e"
+                                android:textSize="15sp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:text="sản phẩm còn trong kho"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LL_diem_ttsp_d"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:textColor="#9e9e9e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Giới thiệu sản phẩm"
+                            android:textSize="15sp" />
+                        <WebView
+                            android:id="@+id/wv_gtsp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </WebView>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LL_diem_ttsp_c"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:textColor="#9e9e9e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Đặt tính sản phẩm"
+                            android:textSize="15sp" />
+                        <WebView
+                            android:id="@+id/wv_ctsp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </WebView>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--thống kê-->
+                <LinearLayout
+                    android:id="@+id/LL_diem_danh_gia"
+                    android:orientation="vertical"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#9e9e9e"
+                        android:textSize="15sp"
+                        android:text="Nhận xét và đánh giá"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:background="#f7ecca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_margin="10dp"
+                            android:background="#cececc"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
+                                android:background="#f7ecca"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RelativeLayout
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:id="@+id/TV_saotb"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="40sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_toRightOf="@+id/TV_saotb"
+                                        android:gravity="center"
+                                        android:text="trên 5"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+
+                                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                    android:id="@+id/mrb_tbsao"
+                                    style="@style/Widget.MaterialRatingBar.RatingBar.Indicator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:rating="0"
+                                    android:stepSize="0.01"
+                                    android:theme="@style/RatingBar" />
+
+                                <TextView
+                                    android:id="@+id/tv_sp_so_luot_danh_gia"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 Đánh giá"
+                                    android:textSize="8sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#f7ecca"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="12dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="0">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="5 SAO"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+
+                                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                        android:id="@+id/pr_5sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="60"
+                                        app:rcBackgroundColor="#e9e9e9"
+                                        app:rcBackgroundPadding="0dp"
+                                        app:rcMax="0"
+                                        app:rcProgress="50"
+                                        app:rcProgressColor="#FFC107"
+                                        app:rcRadius="5dp"
+                                        app:rcReverse="false" />
+
+                                    <TextView
+                                        android:id="@+id/tv_5sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="12dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="0">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="4 SAO"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+
+                                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                        android:id="@+id/pr_4sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="60"
+                                        app:rcBackgroundColor="#e9e9e9"
+                                        app:rcBackgroundPadding="0dp"
+                                        app:rcMax="0"
+                                        app:rcProgress="50"
+                                        app:rcProgressColor="#FFC107"
+                                        app:rcRadius="5dp"
+                                        app:rcReverse="false" />
+
+                                    <TextView
+                                        android:id="@+id/tv_4sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="20"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="12dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="0">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="3 SAO"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+
+                                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                        android:id="@+id/pr_3sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="60"
+                                        app:rcBackgroundColor="#e9e9e9"
+                                        app:rcBackgroundPadding="0dp"
+                                        app:rcMax="0"
+                                        app:rcProgress="50"
+                                        app:rcProgressColor="#FFC107"
+                                        app:rcRadius="5dp"
+                                        app:rcReverse="false" />
+
+                                    <TextView
+                                        android:id="@+id/tv_3sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="20"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="12dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="0">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="2 SAO"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+
+                                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                        android:id="@+id/pr_2sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="60"
+                                        app:rcBackgroundColor="#e9e9e9"
+                                        app:rcBackgroundPadding="0dp"
+                                        app:rcMax="0"
+                                        app:rcProgress="50"
+                                        app:rcProgressColor="#FFC107"
+                                        app:rcRadius="5dp"
+                                        app:rcReverse="false" />
+
+                                    <TextView
+                                        android:id="@+id/tv_2sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="20"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="0">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:text="1 SAO"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+
+                                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                        android:id="@+id/pr_1sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="60"
+                                        app:rcBackgroundColor="#e9e9e9"
+                                        app:rcBackgroundPadding="0dp"
+                                        app:rcMax="0"
+                                        app:rcProgress="50"
+                                        app:rcProgressColor="#FFC107"
+                                        app:rcRadius="5dp"
+                                        app:rcReverse="false" />
+
+                                    <TextView
+                                        android:id="@+id/tv_1sao"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="20"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:textSize="8sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#e9e7e7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/RV_danh_gia"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--xoa sau-->
+
+                <TextView
+                    android:layout_marginBottom="500dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <RelativeLayout
+            android:background="#9e9e9e"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="#faf6ef"
+                android:layout_marginTop="0.001dp"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:id="@+id/LL_them_danh_gia"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/review"
+                        android:textColor="#59818e"
+                        android:text="\ue900"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textColor="#59818e"
+                        android:textAlignment="center"
+                        android:textSize="8sp"
+                        android:text="Thêm đánh giá"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/tv_mhsp_them_vao_gio_hang"
+                    android:background="#f57224"
+                    android:textColor="#faf6ef"
+                    android:textAllCaps="false"
+                    android:text="Thêm vào giỏ hàng"
+                    android:layout_weight="8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--cho nay ne-->
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.DrawerLayout>

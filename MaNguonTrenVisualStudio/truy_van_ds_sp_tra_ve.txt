@@ -1,0 +1,44 @@
+/*select sp.*, bang_sp_tbsao_tongtim_stt.so_sao_tb, bang_sp_tbsao_tongtim_stt.so_tim*/
+select sp.id_san_pham, sp.ten_san_pham, sp.anh_san_pham, sp.gia_cao, sp.gia_ban_ra, bang_sp_tbsao_tongtim_stt.so_sao_tb, bang_sp_tbsao_tongtim_stt.so_tim
+from 
+(
+		select bang_sp_sao_tb.id_san_pham, bang_sp_sao_tb.so_sao_tb, count(dsmm.id_san_pham) as so_tim
+		from
+		(
+				select *
+				from
+				(
+								select bang_sp_bo_loc.id_san_pham, AVG(CAST(dg.so_sao_danh_gia AS FLOAT)) AS 'so_sao_tb' 
+								from 
+								(
+														select bang_sp_bo_loc.id_san_pham
+														from (
+															select distinct sp.id_san_pham
+															from 
+															loai_san_pham lsp join danh_sach_loai_san_pham_cua_san_pham ds_lsp_sp on lsp.id_loai_san_pham=ds_lsp_sp.id_loai_san_pham
+															join san_pham sp on sp.id_san_pham=ds_lsp_sp.id_san_pham
+															join thuong_hieu th on th.id_thuong_hieu=sp.id_thuong_hieu
+															where 
+																1>0
+																{lsp.id_loai_san_pham}/*and lsp.id_loai_san_pham<>123*/
+																{th.id_thuong_hieu}/*and th.id_thuong_hieu<>123*/
+																{sp.gia_ban_ra_>}/*and sp.gia_ban_ra > 123 */
+																{sp.gia_ban_ra_<}/*and sp.gia_ban_ra < 123456789999999999999999*/
+																{search}/*and (
+																		sp.ten_san_pham like '%%'
+																		or th.ten_thuong_hieu like '%%'
+																		or lsp.ten_loai_san_pham like '%%'
+																	)*/	
+															) as bang_sp_bo_loc
+								) as bang_sp_bo_loc left join danh_gia dg on  bang_sp_bo_loc.id_san_pham=dg.id_san_pham
+								group by bang_sp_bo_loc.id_san_pham
+				) as bo_loc_tb_sao
+				{so_sao_tb}/*where bo_loc_tb_sao.so_sao_tb >= 5*/
+		) as bang_sp_sao_tb left join danh_sach_mong_muon dsmm on bang_sp_sao_tb.id_san_pham=dsmm.id_san_pham
+		group by bang_sp_sao_tb.id_san_pham, bang_sp_sao_tb.so_sao_tb
+) as bang_sp_tbsao_tongtim_stt join san_pham sp on bang_sp_tbsao_tongtim_stt.id_san_pham=sp.id_san_pham
+{sap_xep}/*order by bang_sp_tbsao_tongtim_stt.so_sao_tb desc, bang_sp_tbsao_tongtim_stt.so_tim asc, sp.gia_ban_ra asc*/
+offset {vitri_bat_dau} rows
+fetch next {so_phan_tu_can_lay} rows only
+
+

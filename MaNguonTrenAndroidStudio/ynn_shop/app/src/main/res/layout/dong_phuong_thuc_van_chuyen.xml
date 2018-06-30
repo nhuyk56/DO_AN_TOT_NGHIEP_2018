@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/vien_tong_gia"
+    android:layout_gravity="center"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp">
+<TextView
+    android:textSize="12sp"
+    android:textColor="#353535"
+    android:textStyle="bold"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:maxLines="3"
+    android:id="@+id/tv_ten_ptvc"
+    android:text="vnpost - giao chậm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/tv_ten_ptvc"
+        android:layout_marginTop="3dp"
+        android:id="@+id/tv_thoi_gian_giao"
+        android:textSize="10sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text="1 - 2 ngày"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

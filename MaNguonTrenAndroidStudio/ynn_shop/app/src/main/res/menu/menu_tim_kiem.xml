@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:id="@+id/trang_chu"
+        android:title="Trang chủ"
+        app:showAsAction="collapseActionView"
+        android:layout_width="wrap_content"/>
+    <item android:id="@+id/trang_giam_gia"
+        android:title="Giảm giá"
+        app:showAsAction="collapseActionView"
+        android:layout_width="wrap_content"/>
+    <item android:id="@+id/trang_danh_muc"
+        android:title="Danh mục"
+        app:showAsAction="collapseActionView"
+        android:layout_width="wrap_content"/>
+    <item android:id="@+id/trang_tai_khoan"
+        android:title="Tài khoản của tôi"
+        app:showAsAction="collapseActionView"
+        android:layout_width="wrap_content"/>
+</menu>

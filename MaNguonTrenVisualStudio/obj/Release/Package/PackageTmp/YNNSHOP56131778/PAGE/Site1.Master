@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.YNNSHOP56131778.PAGE.Site1" %>
+
+<html>
+<head runat="server">
+    <title>Shop Bán Phụ Kiện Xe Hơi Nguyễn Như Ý</title>
+    <link href="~/YNNSHOP56131778/PAGE/CSS/StyleSheet.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            color: #FFFFFF;
+            text-align: center;
+            height: 20px;
+            background-color: #000000;
+        }
+        #Button1 {
+            margin-left: 4px;
+        }
+        #Text1 {
+            width: 145px;
+        }
+        #btnTK {
+            margin-left: 12px;
+        }
+        </style>
+</head>
+<body>
+<!-- phần bắt buộc -->
+
+    <form id="form1" runat="server">
+    <div>
+        <div id="Wrapper">
+            <div id="banner">
+
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/YNNSHOP56131778/PAGE/IMG/banner.jpg" Width="100%" Height="221px" />
+
+            </div>
+            <div id="navigation">
+                <ul id="nav">
+                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Home.aspx">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_About.aspx">About US</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Feedback.aspx">Feedback</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" Visible="False" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Management/NhomNguyenNhuY_Management.aspx">Management</asp:HyperLink></li>
+                     
+                    <li style="float:right">
+                        
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Login/NhomNguyenNhuY_Login.aspx">Login
+                            </asp:HyperLink>
+
+                    </li>
+                    
+                   <li style="float:right">
+                        
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Register.aspx">Register
+                            </asp:HyperLink>
+
+                    </li>
+                    <li style="float:right">
+                        
+                            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/NhomNguyenNhuY_Pages/NhomNguyenNhuY_Cart.aspx">Cart
+                            </asp:HyperLink>
+
+                    </li>
+                    <li style="float:right">
+                        
+                            <asp:Label ID="lbluser0" runat="server" style="font-weight: 700">Hello    </asp:Label>
+
+                            <asp:Label ID="lbluser" runat="server" style="font-weight: 700; color: #FF0000"></asp:Label>
+
+                            <asp:Button ID="Button1" runat="server" Height="24px" Text="logout"  />
+
+                    </li>
+                    <li style="float:right">
+                        <asp:TextBox ID="txtsearch" runat="server" Width="108px"></asp:TextBox>
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="19px" ImageUrl="~/YNNSHOP56131778/PAGE/IMG/imgTK.png"  Width="51px" />
+                    </li>
+                    
+
+                </ul>
+            </div>
+           
+            <div id="content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+   
+            <table style="width: 100%;">
+                <tr>
+                    <td class="auto-style2"><span style="color: rgb(176, 166, 166); font-family: tahoma, arial, 宋体, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(14, 14, 14);  display: inline !important; float: none;">Copyright ©2017-2018. 56131778 - Nguyễn Như Ý - 56TH2. All Rights Reserved.</span></td>
+                   
+                </tr>
+               
+            </table>
+        </body>
+</html>

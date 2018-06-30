@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape
+            android:shape="oval">
+            <size android:height="1000dp"
+                android:width="1000dp"
+                android:viewportHeight="108"
+                android:viewportWidth="108"/>
+
+            <gradient
+                android:startColor="#e71b0380"
+                android:endColor="#0095bc"
+                android:angle="-90" />
+        </shape>
+    </item>
+<item
+    android:drawable="@drawable/ic_splash"
+    android:gravity="center"
+    android:height="700dp"
+    android:width="1000dp"/>
+</layer-list>

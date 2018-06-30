@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/tiet_de"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="KHÔI PHỤC MẬT KHẨU"
+            android:textColor="#ffffff"
+            android:background="#f57224"
+            android:layout_width="match_parent"
+            android:layout_height="51dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mã khôi phục"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+            android:id="@+id/et_mkm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu mới"
+            android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_mkm_nl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mật khẩu mới nhập lại"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/TV_xac_nhan"
+                android:background="#f57224"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:text="Xác nhận"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/TV_thoi"
+                android:background="#1a9cb7"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:text="Thôi"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
