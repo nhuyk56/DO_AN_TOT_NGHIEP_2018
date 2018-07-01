@@ -1,4 +1,3 @@
-
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:w="urn:schemas-microsoft-com:office:word"
@@ -1606,7 +1605,7 @@ style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp
 l&#7853;p trình</span> </span><span style='mso-bookmark:_Hlk518115389'><span
 style='font-size:13.0pt;mso-bidi-font-size:12.0pt'>và k&#7871;t n&#7889;i
 v&#7899;i SOAP Web Services cho &#7913;ng d&#7909;ng bán hàng online b&#7857;ng
-ngôn ng&#7919; <span style='mso-spacerun:yes'> </span>l&#7853;p trình java<o:p></o:p></span></span></p>
+ngôn ng&#7919; <span style='mso-spacerun:yes'> </span>l&#7853;p trình java<o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l4 level2 lfo2;
 tab-stops:list 72.0pt'><span style='mso-bookmark:_Hlk518115389'><![if !supportLists]><span
@@ -1614,7 +1613,7 @@ style='font-size:13.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
 style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-size:13.0pt;mso-bidi-font-size:
-12.0pt'><span style='mso-spacerun:yes'> </span>Xây d&#7921;ng h&#7879;
+12.0pt'><span style='mso-spacerun:yes'> </span>Xây d&#7921;ng h&#7879;
 th&#7889;ng bán hàng v&#7899;i các ch&#7913;c n&#259;ng chính:<o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-left:117.0pt;text-indent:-18.0pt;mso-list:
@@ -1804,7 +1803,7 @@ style='mso-bidi-font-weight:normal'><span lang=FR style='font-size:13.0pt;
 mso-bidi-font-size:12.0pt;mso-ansi-language:FR'>Email&nbsp;:</span></b><span
 lang=FR style='font-size:13.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:
 FR'> <span class=MsoHyperlink><a href="mailto:y.nn.56cntt@ntu.edu.vn">y.nn.56cntt@ntu.edu.vn</a></span><span
-style='mso-spacerun:yes'>  </span><b style='mso-bidi-font-weight:normal'>Phone&nbsp;:</b>
+style='mso-spacerun:yes'>  </span><b style='mso-bidi-font-weight:normal'>Phone&nbsp;:</b>
 01672191286<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
